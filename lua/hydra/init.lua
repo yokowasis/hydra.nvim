@@ -189,6 +189,13 @@ function Hydra:initialize(input)
          color = self.config.foreign_keys == 'warn' and 'Teal' or 'Blue',
          desc = 'exit'
       }
+      self.heads['<esc>'] = { nil, { exit = true } }
+      heads_spec['<esc>'] = {
+         head = '<esc>',
+         index = vim.tbl_count(self.heads),
+         color = self.config.foreign_keys == 'warn' and 'Teal' or 'Blue',
+         desc = 'exit'
+      }
    end
 
    -- self.hint = hint(self, self.config.hint, input.hint)
