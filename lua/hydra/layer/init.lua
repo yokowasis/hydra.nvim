@@ -188,8 +188,7 @@ function Layer:initialize(input)
       exit_keymaps = {}
       for mode, _ in pairs(self.layer_keymaps) do
          exit_keymaps[mode] = { 
-            ['<Esc>'] = {},
-            ['<c-e>'] = {},
+            ['<c-i>'] = {},
          }
       end
    end

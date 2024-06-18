@@ -182,9 +182,9 @@ function Hydra:initialize(input)
       self.heads[lhs] = { rhs, opts }
    end
    if not has_exit_head then
-      self.heads['<Esc>'] = { nil, { exit = true } }
-      heads_spec['<Esc>'] = {
-         head = '<Esc>',
+      self.heads['<c-i>'] = { nil, { exit = true } }
+      heads_spec['<c-i>'] = {
+         head = '<c-i>',
          index = vim.tbl_count(self.heads),
          color = self.config.foreign_keys == 'warn' and 'Teal' or 'Blue',
          desc = 'exit'
